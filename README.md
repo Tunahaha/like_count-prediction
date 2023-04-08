@@ -40,11 +40,11 @@ default : intern_homework_private_test_dataset.csv
 
 Use `--max_depth` or `-m` means XGBoost parameter about max_depth.
 
-default : 7
+default : 9
 
 Use `--eta` or `-e` means XGBoost parameter about learning rate.
 
-default : 0.05
+default : 0.01
 
 Use `--eval_metric` or `-ev` means you XGBoost parameter about evaluation metric.
 
@@ -52,7 +52,7 @@ default : mape
 
 Use `--num_round` or `-n` means XGBoost parameter about iteration number.
 
-default : 100
+default : 300
 
 ### Warning
 -------
