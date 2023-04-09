@@ -44,7 +44,7 @@ default : 9
 
 Use `--eta` or `-e` means XGBoost parameter about learning rate.
 
-default : 0.01
+default : 0.05
 
 Use `--eval_metric` or `-ev` means you XGBoost parameter about evaluation metric.
 
