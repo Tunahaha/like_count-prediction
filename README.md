@@ -1,59 +1,48 @@
-# like_count-prediction
-This repository is for Dcard Data itern homework based on [XGBoost](https://github.com/dmlc/xgboost).
+# Like Count Prediction with XGBoost
 
-### Dependencies
--------
+This repository contains the code for predicting the like count of Dcard posts using the [XGBoost](https://github.com/dmlc/xgboost) machine learning library. This project was a part of the Dcard Data Intern homework.
+
+## Dependencies
+The following libraries are required to run this project:
+
 - xgboost
 - mlxtend
 - jieba
 - textblob
 
-You should ` pip install ` about those dependencies.
+To install these dependencies, use the following command:
 
-### XGBoost
--------
-<img src="https://xgboost.ai/images/logo/xgboost-logo.svg" width=135/> 
+```sh
+pip install xgboost mlxtend jieba textblob
+```
 
-XGBoost is an optimized distributed gradient boosting library designed to be highly ***efficient***, ***flexible*** and ***portable***.
-It implements machine learning algorithms under the [Gradient Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) framework.
-XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solve many data science problems in a fast and accurate way.
+## About XGBoost
+![XGBoost Logo](https://xgboost.ai/images/logo/xgboost-logo.svg)
 
-### How to use?
--------
-you can use `python Dcard_HW.py` on CMD
+XGBoost is an optimized distributed gradient boosting library designed to be highly efficient, flexible, and portable. It implements machine learning algorithms under the [Gradient Boosting](https://en.wikipedia.org/wiki/Gradient_boosting) framework. XGBoost provides a parallel tree boosting (also known as GBDT, GBM) that solves many data science problems in a fast and accurate way.
 
-you just need to put your data in the same stage.
-### Options
--------
+## Usage
 
-Use `--train_Set` or `-t` means train_Set data name. 
+To use this project, run the following command in your terminal:
 
-default : intern_homework_train_dataset.csv
+```sh
+python Dcard_HW.py
+```
 
-Use `--public_test_set` or `-pu` means Public_Test_Set data name.
+Make sure your data is in the same directory as the script.
 
-default : intern_homework_public_test_dataset.csv
+## Options
 
-Use `--private_test_set` or `-pr` means Private_Test_Set data name.
+The script accepts several options:
 
-default : intern_homework_private_test_dataset.csv
+- `--train_Set` or `-t`: Name of the training set data file. Default is `intern_homework_train_dataset.csv`.
+- `--public_test_set` or `-pu`: Name of the public test set data file. Default is `intern_homework_public_test_dataset.csv`.
+- `--private_test_set` or `-pr`: Name of the private test set data file. Default is `intern_homework_private_test_dataset.csv`.
+- `--max_depth` or `-m`: XGBoost parameter for max_depth. Default is `9`.
+- `--eta` or `-e`: XGBoost parameter for learning rate. Default is `0.05`.
+- `--eval_metric` or `-ev`: XGBoost parameter for evaluation metric. Default is `mape`.
+- `--num_round` or `-n`: XGBoost parameter for number of iterations. Default is `300`.
 
-Use `--max_depth` or `-m` means XGBoost parameter about max_depth.
+## Warning
 
-default : 9
-
-Use `--eta` or `-e` means XGBoost parameter about learning rate.
-
-default : 0.05
-
-Use `--eval_metric` or `-ev` means you XGBoost parameter about evaluation metric.
-
-default : mape
-
-Use `--num_round` or `-n` means XGBoost parameter about iteration number.
-
-default : 300
-
-### Warning
--------
-The Matrix is huge，you should have a lot of memory.
+Please note that the matrices used in this project are quite large. Make sure to have sufficient memory available.
